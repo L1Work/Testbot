@@ -1,0 +1,11 @@
+import tweepy
+
+CONSUMER_KEY = 'CpIcPJeQtwYUMkd8CItXNwUFd'
+CONSUMER_SECRET = 'GEUPk5qPo5ISgWg6r2lYHIs99d4DEy9vCe58YGPrQkkVxdU57k'
+ACCESS_KEY = '814563191887896577-U3FPkMrhCbpcskB1Za8BQ2SQ1vcBKs6'
+ACCESS_SECRET = 'nQpVVDO5k6SUZQLCYGfewAcKweRzNjHtaOF7q5DxJ3PO6'
+auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
+auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
+api = tweepy.API(auth)
+
+api.update_status("Tweepy Test!")
